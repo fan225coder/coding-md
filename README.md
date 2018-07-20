@@ -1,7 +1,7 @@
 # Notes for Coding Problems
 ## Binary Search
 Notation:
-- $p$ is the predicate, i.e., if $a<b$, then $p(a)⇒p(b)$
+- `p` is the predicate, i.e., if `a<b`, then `p(a)` implies `p(b)`
 - $L$ is the lower boundary, and $R$ is the upper boundary and $M=L+(R-L)/2$ is the mid point
 ### Basic
 |Problem |Type|Note|
