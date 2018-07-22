@@ -4,10 +4,11 @@
       * the space `A` (usually an array) is sorted in an increasing order by the binary relation `<`, and
       * the predicate `p` on the space `A` has the property that `p(i)` implies `p(i)` if `i<j` where `i` and `j` are index of element in `A` and `p(i)` indicates the predicate is true (`~p(i)` indicates the predicate is false).
 2. Binary Search Types:
-   * `first_true`: find the smallest `i` such that `p(i)` :
-      * LB (lower_bound) binary search finds the first element *greater than or equal to* the target `t` (`p(i)` if `A[i]>=t`).
-      * UB (upper_bound) binary search finds the first element *strictly greater* than the target `t` (`~p(i)` if `A[i]>t`).
-   * `last_false`: find the largest `i` such that `~p(i)` 
+   * "first true": find the smallest `i` such that `p(i)`:
+      * `first_ge` ([lower_bound](http://www.cplusplus.com/reference/algorithm/lower_bound/)) finds the *first* element *greater than or equal to* the target `t` (`p(i)` if `A[i]>=t`).
+      * `first_gt` ([upper_bound](http://www.cplusplus.com/reference/algorithm/upper_bound/)) finds the *first* element *strictly greater* than the target `t` (`~p(i)` if `A[i]>t`).
+   * "last false": find the largest `i` such that `~p(i)`:
+      * `last_le` finds the *last* element *less than or equal to* the target `t` (`p(i)` if `A[i]<=t`).
 3. `lo` is the lower boundary, `hi` is the upper boundary and `mid=lo+(hi-lo)/2` is the mid point
 ## Being Bug-Free:
    * check if `A` is empty before you start the search (test case 1: empty `A`).
