@@ -1,9 +1,11 @@
 # Notes for Coding Problems
 ## Binary Search
 Notation:
-- `p` is the predicate. In the following, we set `p(a)` implies `p(b)` if `a<b`.
+- In the following, we always consider an array sorted in an increasing order by the binary relation `<`
+- `p` is the predicate as in this [Topcoder tutorial](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search), i.e., `p(a)` implies `p(b)` if `a<b`.
+- LB stands for lower bound. It corresponds the binary search used to find the first element *greater than or equal to* the query.
+- UB stands for upper bound. It corresponds the binary search used to find the first element *strictly greater* than the query.
 - `lo` is the lower boundary, `hi` is the upper boundary and `mid=lo+(hi-lo)/2` is the mid point
-- LB stands for lower bound. It corresponds the binary search used to find the *first* element *no less* than the query.
 ### Basic
 |Problem|Type|Note|Predicate|
 |--|:--:|--|--|
