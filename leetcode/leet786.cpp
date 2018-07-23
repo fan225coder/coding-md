@@ -2,34 +2,47 @@ class Solution {
     double frac(int n, int d){
         return (double)n/d;
     }
-    bool predicate(const vector<int>& A, const int K, const double x, int& count_le, vector<int>& ans) {
+    bool predicate(const vector<int>& a, const int k, const double bound, int& count, vector<int>& ans) {
+        const int n=a.size();
         double max_f=1;
         int i=0;
         int j=0;
-        while (count_le<=K && i<A.size()) {
-            while (count_le<=K && j+1<A.size() && (double)A[j+1]/A[i]<=x) j++;
-            count_le+=j-i;
-            if ((double)A[j]/A[i]>max_f) {
-                max_f=(double)A[j]/A[i];
-                ans[0]=A[i];
-                ans[1]=A[j];
+        while (count<=k && i<n){
+            while (count<=k && j+1<n && frac(a[j+1],a[i])<=bound) j++;
+            if (j<=i) {
+                i++;
+                j++;
+            } else {
+                if (frac(a[j],a[i])>max_f) {
+                    max_f=frac(a[j],a[i]);
+                    ans[0]=a[i];
+                    ans[1]=a[j];
+                }
+                const int d=j-i;
+                if (j==n-1) {
+                    count+= d%2 ? (d+1)/2*d : d/2*(d+1); // avoid overflow
+                    break;
+                }
+                count+=d;
+                i++;
             }
-            i++;
         }
-        return count_le>=K;
+        return count>=k;
     }
     public:
     vector<int> kthSmallestPrimeFraction(vector<int>& A, int K) {
         const int n=A.size();
+        // finding K-th smallest p/q is equal to fining k= n*(n-1)/2 - K + 1 largest p/q
+        const int k=n*(n-1)/2-K+1;
+        // fining k largest p/q is equal to finding k smallest q/p
         double lo=1;
         double hi=A[n-1]/A[0];
-        K=n*(n-1)/2-K+1;
         vector<int> ans(2);
         while (lo<hi){
             double mid=lo+(hi-lo)/2;
             int count_le=0;
-            if (predicate(A,K,mid,count_le,ans)){
-                if (count_le==K){
+            if (predicate(A,k,mid,count_le,ans)){
+                if (count_le==k){
                     break;
                 } else {
                     hi=mid;
