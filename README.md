@@ -17,12 +17,10 @@
    * how to set `mid` (**test case**: `A` contains two elements, and `~p(0)` and `p(1)`).
    * when search finishes, check again if the predicate is true (**test case**: `p(i)` for all `i`, or `~p(i)` for all `i`)
 ## Coding Problems:
-### Basic Predicates:
- * `first_true` special cases:
-      * `first_ge` ([lower_bound](http://www.cplusplus.com/reference/algorithm/lower_bound/)) finds the *first* element *greater than or equal to* the target `t` (`p(i)` if `A[i]>=t`).
-      * `first_gt` ([upper_bound](http://www.cplusplus.com/reference/algorithm/upper_bound/)) finds the *first* element *strictly greater* than the target `t` (`~p(i)` if `A[i]>t`).
- * `last_false` special cases:
-      * `last_le` finds the *last* element *less than or equal to* the target `t` (`p(i)` if `A[i]<=t`).
+### Target-Directed Predicates:
+ * `first_ge` ([lower_bound](http://www.cplusplus.com/reference/algorithm/lower_bound/)) finds the *first* element *greater than or equal to* the target `t` (`p(i)` if `A[i]>=t`).
+ * `first_gt` ([upper_bound](http://www.cplusplus.com/reference/algorithm/upper_bound/)) finds the *first* element *strictly greater* than the target `t` (`~p(i)` if `A[i]>t`).
+ * `last_le` finds the *last* element *less than or equal to* the target `t` (`p(i)` if `A[i]<=t`).
 
 |Problem|Type|Predicate|Note|
 |--|--|--|--|
@@ -30,6 +28,11 @@
 | ![][leet-medium] [leet34](leetcode/leet34.cpp)<br/>[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)|1.`first_ge`+`first_gt` <br>2.`first_ge`+`last_le`| | |
 | ![][leet-easy] [leet278](leetcode/leet278.cpp)<br/>[First Bad Version](https://leetcode.com/problems/first-bad-version/description/)|`first_true`|`p`=`isBadVersion` | |
 | ![][leet-easy] [leet35](leetcode/leet35.cpp)<br/>[Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)|`first_ge`| | |
+
+### Implicit Predicates:
+
+|Problem|Type|Predicate|Note|
+|--|--|--|--|
 | ![][leet-easy] [leet852](leetcode/leet852.cpp)<br/>[Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/)|`first_true`| `p`="going down": `p(i)` if `i<n-1` (always true) and `A[i]>A[i+1]` | |
 
 # Bit
