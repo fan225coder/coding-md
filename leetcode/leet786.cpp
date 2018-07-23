@@ -8,7 +8,7 @@ class Solution {
         int i=0;
         int j=0;
         while (count<=k && i<n){
-            while (count<=k && j+1<n && frac(a[j+1],a[i])<=bound) j++;
+            while (count<=k && j+1<n && frac(a[j+1],a[i])<=bound) j++; // linear scan or binary search
             if (j<=i) {
                 i++;
                 j++;
