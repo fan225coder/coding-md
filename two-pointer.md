@@ -10,6 +10,6 @@ The two pointer techinque achieves this efficiency by exploiting a unique struct
 For example, in many problems, we see this structural property of `p` in the following form: `p(i,j)` implies both `p(i,j-1)` and `p(i+1,j)`.
 With this property, if we move from `(i,j)` such that `p(i,j)` to `(i+1,j)`, we don't need to check if `p` holds for `(i+1,0)`, `(i+1,1)`, ..., `(i+1,j)` because we know that they are all true as `p(i,j)` implies `p(i+1,j)` which in turn implies `p(i+1,0)`, `p(i+1,1)`, ..., `p(i+1,j)`. 
 This allows us continue the checking from `p(i+1,j)` without restarting from `j=0` for `i+1`.
-Thus, reduce the complexity from *O(nm)* to *O(n+m)*.
+Thus, the complexity is reduced from *O(nm)* to *O(n+m)*.
 
-Discovery this strutural property is the key to solve the problem with the two pointer techinque.
+Discovering this strutural property is the key to solve the problem with the two pointer techinque.
