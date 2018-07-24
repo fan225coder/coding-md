@@ -1,0 +1,6 @@
+- [Binary Search](#binary-search)
+  * [Being Bug-Free:](#being-bug-free-)
+  * [Coding Problems:](#coding-problems-)
+    + [Target-Directed Predicates:](#target-directed-predicates-)
+    + [Implicit Predicates:](#implicit-predicates-)
+    + [Bounding](#bounding)
