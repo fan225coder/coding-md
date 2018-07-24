@@ -1,3 +1,7 @@
+[leet-medium]: .README/leet-medium.png "Medium"
+[leet-easy]: .README/leet-easy.png "Easy"
+[leet-hard]: .README/leet-medium.png "Hard"
+
 # Two Pointer Technique
 
 ## Introduction
@@ -13,3 +17,9 @@ This allows us continue the checking from `p(i+1,j)` without restarting from `j=
 Thus, the complexity is reduced from *O(nm)* to *O(n+m)*.
 
 Discovering this strutural property is the key to solve the problem with the two pointer techinque.
+
+## Coding Problems:
+
+|Problem|Type|Note|
+|--|--|--|
+| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| | 
