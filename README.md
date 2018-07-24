@@ -1,6 +1,1 @@
-- [Binary Search](binary-search.md/#binary-search)
-  * [Being Bug-Free:](binary-search.md/#being-bug-free-)
-  * [Coding Problems:](binary-search.md/#coding-problems-)
-    + [Target-Directed Predicates:](binary-search.md/#target-directed-predicates-)
-    + [Implicit Predicates:](binary-search.md/#implicit-predicates-)
-    + [Bounding](binary-search.md/#bounding)
+- [Binary Search](binary-search.md)
