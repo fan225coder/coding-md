@@ -1,4 +1,14 @@
 # Two Pointer Technique
 
 ## Introduction
-Let `A` be an array of size *n* and `B` be an array of size *m*. We call a space of *O(nm)* pairs `(A[i],B[j])` a *pair space*. The two pointer technique is used to extract information from the pair space (for example, finding pairs with certain property)  in the linear *O(n+m)* time, instead of the quadratic time *O(nm)*.
+Let `A` be an array of size *n* and `B` be an array of size *m*.
+We call a space of *O(nm)* pairs `(A[i],B[j])` a *pair space*.
+The two pointers refer to the two indices `i` and `j`.
+The two pointer technique is used to identify pairs of *target predicate* `p` from the pair space in the linear *O(n+m)* time, instead of the quadratic time *O(nm)*.
+
+The two pointer techinque achieves this efficiency by exploiting a unique structural property of `p`, which allows us to change `i` and `j` "uni-directionally" (no need to reset `j` after changing `i` or vice versa).
+For example, in many problems, we see the property of `p`: `p(i,j)` implies both `p(i,j-1)` and `p(i+1,j)`.
+This property implies if we move from `(i,j)` such that `p(i,j)` to `(i+1,j)`, we don't need to check if `p` holds for `(i+1,0)`, `(i+1,1)`, ..., `(i+1,j)` because we know that they are all true as `p(i,j)` implies `p(i+1,j)` which in turn implies `p(i+1,0)`, `p(i+1,1)`, ..., `p(i+1,j)`. 
+This allows us continue the checking from `p(i+1,j)` (ie, without restarting from `j=0` for `i+1`)
+
+Discovery this strutural property is the key to solve the problem with the two pointer techinque.
