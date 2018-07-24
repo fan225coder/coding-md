@@ -20,6 +20,6 @@ Discovering this strutural property is the key to solve the problem with the two
 
 ## Coding Problems:
 
-|Problem|Type|Note|
-|--|--|--|
-| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| | 
+|Problem|Pair Space|Value|Predicate `p`|Property |Note|
+|--|--|--|--|--|--|
+| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| `(i,j)` s.t. `i<=j`| `sum(i,j)` | `sum(i,j)<K` | `p(i,j)` implies <br/> `p(i,j-1)` and `p(i+1,j)`| |
