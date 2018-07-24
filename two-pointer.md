@@ -1,3 +1,3 @@
 # Two Pointer Technique
 
-This technique is used to process *O(nm)* pairs on spaces of sizes *O(n)* and *O(m)* in the linear *O(n+m)* time.
+Let `A` be an array of size *n* and `B` be an array of size *m*. We call a space of *O(nm)* pairs `(A[i],B[j])` a *pair space*. The two pointer technique is used to extract information from the pair space (for example, finding pairs with certain property)  in the linear *O(n+m)* time, instead of the quadratic time *O(nm)*.
