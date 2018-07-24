@@ -22,5 +22,5 @@ Discovering this strutural property is the key to solve the problem with the two
 
 |Problem|Pair Space|Predicate |Property|
 |--|--|--|--|
-| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray&nbsp;Product&nbsp;Less&nbsp;Than&nbsp;K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| one array of positive integers <br/> `(i,j)` s.t. `i<=j`| `p(i,j)` iff <br/> `prod(i,j)<K` | `p(i,j)` implies <br/> `p(i,j-1)` and `p(i+1,j)`|
+| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray&nbsp;Product&nbsp;Less&nbsp;Than&nbsp;K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| one array of positive integers <br/> `(i,j)` s.t. `i<=j`| `p(i,j)` iff <br/> `prod(i,j)<K` | `p(i,j)` implies <br/> `p(i,j-1)`&nbsp;and&nbsp;`p(i+1,j)`|
 | ![][leet-medium] [leet826](leetcode/leet826.cpp)<br/>[Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/description/)| Two sorted arrays: workers `A` and jobs `B`. `A` in decreasing skill level. `B` in decreasing profit (ties in increasing difficulty <br/> all `(i,j)` in range | `p(i,j)` iff <br/> `A[i]` can do job with higher or equal profit than `B[j]` | `p(i,j)` implies <br/> `p(i,j+1)` and `p(i-1,j)`|
