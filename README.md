@@ -37,5 +37,9 @@ In these problems, both the search space `A` and the target value `t` are explic
 | ![][leet-easy] [leet278](leetcode/leet278.cpp)<br/>[First Bad Version](https://leetcode.com/problems/first-bad-version/description/)|`first_true`|`p`=`isBadVersion` | |
 | ![][leet-easy] [leet852](leetcode/leet852.cpp)<br/>[Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/description/)|`first_true`| `p`="going down": `p(i)` if `i<n-1` (always true) and `A[i]>A[i+1]` | |
 
+### Bounding
+
 # Two Pointer Technique
+
+This technique is used to process *O(mn)* pairs in the linear *O(n+m)* time.
 
