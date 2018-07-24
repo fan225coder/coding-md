@@ -22,4 +22,4 @@ Discovering this strutural property is the key to solve the problem with the two
 
 |Problem|Pair Space|Predicate |Property|
 |--|--|--|--|
-| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| one array `A` of positive integers <br/> `(i,j)` s.t. `i<=j`| `p(i,j)` iff <br/> `sum(i,j)<K` | `p(i,j)` implies <br/> `p(i,j-1)` and `p(i+1,j)`|
+| ![][leet-medium] [leet713](leetcode/leet713.cpp)<br/>[Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/description/)| one array `A` of positive integers <br/> `(i,j)` s.t. `i<=j`| `p(i,j)` iff <br/> `prod(i,j)<K` | `p(i,j)` implies <br/> `p(i,j-1)` and `p(i+1,j)`|
