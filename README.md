@@ -1,1 +1,2 @@
 - [Binary Search](binary-search.md)
+- [Two Pointer Technique](two-pointer.md)
